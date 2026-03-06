@@ -1,0 +1,321 @@
+/* ============================================================
+   MY APPROACH SECTION
+   ============================================================ */
+
+.approach-section {
+    padding: 120px 0 120px;
+    background: #0f172a;
+    position: relative;
+    overflow: hidden;
+}
+
+.approach-header {
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.approach-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #f1f5f9;
+}
+
+.approach-heading .accent {
+    background: linear-gradient(135deg, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ----- 3-column phase grid ----- */
+.phases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* ----- Individual phase card ----- */
+.phase-card {
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    min-height: 340px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+    transition: border-color 0.4s ease;
+    background: #080d1a;
+}
+
+.phase-card:hover {
+    border-color: rgba(165, 180, 252, 0.45);
+}
+
+/* Corner cross marks — top-left and top-right */
+.phase-card::before,
+.phase-card::after {
+    content: '+';
+    position: absolute;
+    top: 12px;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.3);
+    line-height: 1;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.phase-card::before {
+    left: 14px;
+}
+
+.phase-card::after {
+    right: 14px;
+}
+
+/* Bottom corner marks via pseudo on inner */
+.phase-corners {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.phase-corners::before,
+.phase-corners::after {
+    content: '+';
+    position: absolute;
+    bottom: 50px;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.3);
+    line-height: 1;
+}
+
+.phase-corners::before {
+    left: 14px;
+}
+
+.phase-corners::after {
+    right: 14px;
+}
+
+/* ----- Animated canvas-reveal glow background ----- */
+.phase-glow-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.phase-card:hover .phase-glow-bg {
+    opacity: 1;
+}
+
+/* Each card gets a unique glow color */
+.phase-card:nth-child(1) .phase-glow-bg {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(99, 102, 241, 0.35) 0%, transparent 70%),
+        repeating-linear-gradient(45deg,
+            rgba(99, 102, 241, 0.05) 0px,
+            rgba(99, 102, 241, 0.05) 1px,
+            transparent 1px,
+            transparent 14px);
+}
+
+.phase-card:nth-child(2) .phase-glow-bg {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(168, 85, 247, 0.35) 0%, transparent 70%),
+        repeating-linear-gradient(-45deg,
+            rgba(168, 85, 247, 0.05) 0px,
+            rgba(168, 85, 247, 0.05) 1px,
+            transparent 1px,
+            transparent 14px);
+}
+
+.phase-card:nth-child(3) .phase-glow-bg {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(236, 72, 153, 0.3) 0%, transparent 70%),
+        repeating-linear-gradient(90deg,
+            rgba(236, 72, 153, 0.05) 0px,
+            rgba(236, 72, 153, 0.05) 1px,
+            transparent 1px,
+            transparent 14px);
+}
+
+/* Animated scan-line across card on hover */
+.phase-glow-scan {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            rgba(255, 255, 255, 0.04) 50%,
+            transparent 100%);
+    background-size: 100% 40%;
+    animation: none;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.phase-card:hover .phase-glow-scan {
+    animation: scan-down 2.5s ease-in-out infinite;
+}
+
+@keyframes scan-down {
+    0% {
+        background-position: 0% -100%;
+    }
+
+    100% {
+        background-position: 0% 200%;
+    }
+}
+
+/* ----- Phase icon area (top of card) ----- */
+.phase-icon-area {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 3;
+    padding: 36px 24px 20px;
+}
+
+.phase-icon-ring {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+    transition: border-color 0.3s, transform 0.3s;
+}
+
+.phase-card:hover .phase-icon-ring {
+    border-color: rgba(165, 180, 252, 0.4);
+    transform: scale(1.08);
+}
+
+/* ----- Phase label chips at bottom ----- */
+.phase-label {
+    position: relative;
+    z-index: 3;
+    padding: 0 24px 28px;
+}
+
+.phase-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 100px;
+    padding: 8px 22px;
+    backdrop-filter: blur(12px);
+    transition: border-color 0.3s;
+}
+
+.phase-card:hover .phase-chip {
+    border-color: rgba(165, 180, 252, 0.5);
+}
+
+.phase-chip-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #e2e8f0;
+}
+
+.phase-chip-num {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #818cf8;
+    letter-spacing: 0.1em;
+}
+
+/* ----- Expanded content (appears on hover) ----- */
+.phase-content {
+    position: absolute;
+    inset: 0;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    pointer-events: none;
+    background: linear-gradient(to bottom,
+            rgba(8, 13, 26, 0.1) 0%,
+            rgba(8, 13, 26, 0.85) 100%);
+}
+
+.phase-card:hover .phase-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.phase-content-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #f1f5f9;
+    margin-bottom: 12px;
+}
+
+.phase-content-desc {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    line-height: 1.7;
+}
+
+.phase-steps {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.phase-step {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: #cbd5e1;
+}
+
+.phase-step-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #818cf8;
+    margin-top: 6px;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+    .phases-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .phase-card {
+        min-height: 260px;
+    }
+
+    .phase-content {
+        opacity: 1;
+        transform: none;
+    }
+}

@@ -1,0 +1,528 @@
+/* ============================================================
+   ABOUT — BENTO GRID
+   ============================================================ */
+
+.about-section {
+    padding: 120px 0 120px;
+    background: #0f172a;
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle dot-grid bg */
+.about-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    background-size: 28px 28px;
+    pointer-events: none;
+}
+
+/* ---- Bento grid layout ---- */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    gap: 16px;
+}
+
+/* ---- Generic bento card ---- */
+.bento-card {
+    background: rgba(15, 23, 45, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 32px;
+    position: relative;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bento-card:hover {
+    border-color: rgba(129, 140, 248, 0.35);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.bento-overline {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #64748b;
+    display: block;
+    margin-bottom: 12px;
+}
+
+/* ======================================================
+   CARD 1 — Collaboration (col 1–7, row 1)
+   ====================================================== */
+.bento-collab {
+    grid-column: 1 / 8;
+    grid-row: 1;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(135deg, rgba(30, 27, 75, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%);
+    overflow: visible;
+}
+
+.bento-collab-text h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+    font-weight: 800;
+    color: #f1f5f9;
+    line-height: 1.35;
+    margin-top: 8px;
+}
+
+.bento-collab-text h3 em {
+    font-style: normal;
+    background: linear-gradient(135deg, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Decorative laptop */
+.laptop-mockup {
+    align-self: flex-end;
+    width: 200px;
+    flex-shrink: 0;
+    margin-right: -16px;
+    margin-bottom: -16px;
+    filter: drop-shadow(0 20px 40px rgba(99, 102, 241, 0.3));
+}
+
+.laptop-screen {
+    background: #1e1b4b;
+    border-radius: 10px 10px 0 0;
+    border: 2px solid rgba(99, 102, 241, 0.3);
+    padding: 8px;
+}
+
+.screen-bar {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.screen-bar span {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.screen-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sc-line {
+    height: 5px;
+    border-radius: 3px;
+    background: rgba(129, 140, 248, 0.25);
+}
+
+.sc-line.w-70 {
+    width: 70%;
+}
+
+.sc-line.w-90 {
+    width: 90%;
+}
+
+.sc-line.w-55 {
+    width: 55%;
+}
+
+.sc-line.w-80 {
+    width: 80%;
+}
+
+.sc-line.w-40 {
+    width: 40%;
+}
+
+.laptop-base {
+    height: 12px;
+    background: #312e81;
+    border-radius: 0 0 6px 6px;
+    border: 2px solid rgba(99, 102, 241, 0.2);
+    border-top: none;
+}
+
+.collab-glow {
+    position: absolute;
+    bottom: -60px;
+    right: -40px;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(99, 102, 241, 0.18) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ======================================================
+   CARD 2 — Tech Stack (col 8–12, row 1)
+   ====================================================== */
+.bento-tech {
+    grid-column: 8 / 13;
+    grid-row: 1;
+}
+
+.bento-tech-heading {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #f1f5f9;
+    margin-bottom: 20px;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tech-tag {
+    padding: 6px 14px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--tag-color, #94a3b8);
+    transition: background 0.2s, transform 0.2s;
+    cursor: default;
+}
+
+.tech-tag:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* ======================================================
+   CARD 3 — Stats (col 1–5, row 2)
+   ====================================================== */
+.bento-stats {
+    grid-column: 1 / 6;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+}
+
+.stats-row {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+}
+
+.stat {
+    flex: 1;
+    text-align: center;
+}
+
+.stat-num {
+    display: block;
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.8rem;
+    font-weight: 900;
+    background: linear-gradient(135deg, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.stat-lbl {
+    font-size: 0.78rem;
+    color: #64748b;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.08);
+    flex-shrink: 0;
+}
+
+/* ======================================================
+   CARD 4 — Personal Note (col 6–9, row 2)
+   ====================================================== */
+.bento-note {
+    grid-column: 6 / 10;
+    grid-row: 2;
+}
+
+.note-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #818cf8;
+    background: rgba(129, 140, 248, 0.1);
+    border: 1px solid rgba(129, 140, 248, 0.2);
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 14px;
+}
+
+.bento-note h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.bento-note h3 em {
+    font-style: normal;
+    color: #c084fc;
+}
+
+.bento-note p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* ======================================================
+   CARD 5 — Code Snippet (col 10–12, row 2)
+   ====================================================== */
+.bento-code {
+    grid-column: 10 / 13;
+    grid-row: 2;
+    background: #020617;
+    padding: 20px;
+}
+
+.code-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 14px;
+}
+
+.code-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.code-dot.red {
+    background: #ff5f57;
+}
+
+.code-dot.yellow {
+    background: #febc2e;
+}
+
+.code-dot.green {
+    background: #28c840;
+}
+
+.code-filename {
+    margin-left: 8px;
+    font-size: 0.72rem;
+    color: #475569;
+    font-weight: 500;
+}
+
+.code-block {
+    font-family: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    font-size: 0.7rem;
+    line-height: 1.8;
+    color: #94a3b8;
+    white-space: pre-wrap;
+    word-break: break-word;
+    margin: 0;
+}
+
+.code-block code {
+    color: #94a3b8;
+}
+
+/* ======================================================
+   CARD 6 — CTA / Availability (col 1–12, row 3)
+   ====================================================== */
+.bento-cta {
+    grid-column: 1 / 13;
+    grid-row: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    flex-wrap: wrap;
+    background: linear-gradient(135deg, rgba(30, 27, 75, 0.7) 0%, rgba(88, 28, 135, 0.4) 100%);
+    border-color: rgba(129, 140, 248, 0.25);
+    padding: 36px 44px;
+}
+
+.avail-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #4ade80;
+    background: rgba(74, 222, 128, 0.08);
+    border: 1px solid rgba(74, 222, 128, 0.25);
+    padding: 6px 14px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+}
+
+.avail-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #4ade80;
+    box-shadow: 0 0 8px #4ade80;
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+
+    0%,
+    100% {
+        opacity: 1;
+        box-shadow: 0 0 8px #4ade80;
+    }
+
+    50% {
+        opacity: 0.6;
+        box-shadow: 0 0 20px #4ade80;
+    }
+}
+
+.bento-cta h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-weight: 800;
+    color: #f1f5f9;
+    line-height: 1.35;
+}
+
+.bento-cta h3 em {
+    font-style: normal;
+    color: #c084fc;
+}
+
+.bento-hire-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #6366f1, #9333ea);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.bento-hire-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.55);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+    .bento-collab {
+        grid-column: 1 / 13;
+    }
+
+    .bento-tech {
+        grid-column: 1 / 13;
+        grid-row: 2;
+    }
+
+    .bento-stats {
+        grid-column: 1 / 13;
+        grid-row: 3;
+    }
+
+    .bento-note {
+        grid-column: 1 / 7;
+        grid-row: 4;
+    }
+
+    .bento-code {
+        grid-column: 7 / 13;
+        grid-row: 4;
+    }
+
+    .bento-cta {
+        grid-column: 1 / 13;
+        grid-row: 5;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .bento-collab,
+    .bento-tech,
+    .bento-stats,
+    .bento-note,
+    .bento-code,
+    .bento-cta {
+        grid-column: 1 / 13;
+    }
+
+    .bento-tech {
+        grid-row: 2;
+    }
+
+    .bento-stats {
+        grid-row: 3;
+    }
+
+    .bento-note {
+        grid-row: 4;
+    }
+
+    .bento-code {
+        grid-row: 5;
+    }
+
+    .bento-cta {
+        grid-row: 6;
+    }
+
+    .stats-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .stat-divider {
+        width: 60px;
+        height: 1px;
+    }
+
+    .bento-cta {
+        flex-direction: column;
+        text-align: center;
+        padding: 28px 24px;
+    }
+
+    .laptop-mockup {
+        display: none;
+    }
+}

@@ -1,0 +1,272 @@
+/* ============================================================
+   PROJECTS SECTION
+   ============================================================ */
+
+.projects-section {
+    padding: 120px 0 120px;
+    background: #0f172a;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background grid */
+.projects-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
+}
+
+/* ----- Section Header ----- */
+.section-header {
+    text-align: center;
+    margin-bottom: 72px;
+}
+
+.section-eyebrow {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #64748b;
+    margin-bottom: 14px;
+}
+
+.section-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: #f1f5f9;
+    line-height: 1.15;
+}
+
+/* ----- Projects list ----- */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* ----- Individual project card ----- */
+.project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: rgba(15, 23, 45, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow:
+        0 0 0 1px rgba(99, 102, 241, 0.2),
+        0 30px 80px rgba(0, 0, 0, 0.4),
+        0 0 60px rgba(99, 102, 241, 0.08);
+}
+
+/* Flip layout for odd cards */
+.card-right {
+    direction: rtl;
+}
+
+.card-right>* {
+    direction: ltr;
+}
+
+/* ----- Screenshot side ----- */
+.project-img-wrap {
+    overflow: hidden;
+    position: relative;
+    min-height: 320px;
+    background: #0a0f1e;
+}
+
+.project-img-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.project-card:hover .project-img-inner {
+    transform: perspective(1000px) rotateY(-4deg) scale(1.03);
+}
+
+.card-right:hover .project-img-inner {
+    transform: perspective(1000px) rotateY(4deg) scale(1.03);
+}
+
+.project-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(99, 102, 241, 0.15) 0%,
+            transparent 60%);
+    pointer-events: none;
+}
+
+/* ----- Content side ----- */
+.project-body {
+    padding: 40px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #f1f5f9;
+    margin-bottom: 14px;
+    line-height: 1.2;
+    transition: color 0.2s;
+}
+
+.project-card:hover .project-title {
+    color: #a5b4fc;
+}
+
+.project-desc {
+    font-size: 1rem;
+    color: #94a3b8;
+    line-height: 1.75;
+    flex: 1;
+    margin-bottom: 32px;
+}
+
+/* ----- Footer row: badges + CTAs ----- */
+.project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Tech icon badges */
+.tech-badges-wrap {
+    position: relative;
+    height: 32px;
+    display: flex;
+    align-items: center;
+}
+
+.tech-badge {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.55rem;
+    font-weight: 800;
+    color: #fff;
+    border: 2px solid rgba(15, 23, 42, 0.9);
+    letter-spacing: 0.02em;
+    transition: transform 0.2s;
+    cursor: default;
+}
+
+.tech-badge:hover {
+    transform: translateY(-4px) scale(1.15);
+    z-index: 10;
+}
+
+/* dummy width so the row has space */
+.tech-badges-wrap::after {
+    content: '';
+    display: inline-block;
+    width: calc(22px * 5 + 12px);
+}
+
+/* ----- CTAs ----- */
+.project-ctas {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.cta-ghost {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #94a3b8;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.cta-ghost:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.cta-live {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #818cf8;
+    text-decoration: none;
+    transition: color 0.2s, gap 0.2s;
+    white-space: nowrap;
+}
+
+.cta-live:hover {
+    color: #a5b4fc;
+    gap: 10px;
+}
+
+.cta-arrow {
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.cta-live:hover .cta-arrow {
+    transform: translate(3px, -3px);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+    .project-card {
+        grid-template-columns: 1fr;
+    }
+
+    .card-right {
+        direction: ltr;
+    }
+
+    .project-img-wrap {
+        min-height: 220px;
+    }
+
+    .project-body {
+        padding: 28px 28px 32px;
+    }
+}

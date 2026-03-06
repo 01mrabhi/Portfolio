@@ -1,0 +1,84 @@
+.navbar {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 1200px;
+    z-index: 1000;
+    padding: 15px 30px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.nav-logo a {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    font-size: 1rem;
+    font-weight: 500;
+    position: relative;
+    opacity: 0.8;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover {
+    opacity: 1;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.glow-btn {
+    background: linear-gradient(135deg, var(--accent-color), var(--accent-purple));
+    color: white;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px var(--accent-glow);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.glow-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--accent-glow);
+}
+
+/* Scrolled state — navbar becomes more prominent */
+.scrolled-nav {
+    background: rgba(15, 23, 42, 0.88) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+}
