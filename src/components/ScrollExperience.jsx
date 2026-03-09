@@ -96,25 +96,25 @@ const SectionContent = ({ type }) => {
     if (type === 'contact') {
         return (
             <div className="contact-links">
-                <a href="mailto:abhishek@example.com" className="contact-link">
+                <a href="mailto:shekhu652@gmail.com" className="contact-link">
                     <span className="c-icon">📧</span>
                     <div>
                         <div className="c-label">Email</div>
-                        <div className="c-value">abhishek@example.com</div>
+                        <div className="c-value">shekhu652@gmail.com</div>
                     </div>
                 </a>
-                <a href="https://wa.me/9999999999" className="contact-link" target="_blank" rel="noreferrer">
+                <a href="https://wa.me/918729016970" className="contact-link" target="_blank" rel="noreferrer">
                     <span className="c-icon">💬</span>
                     <div>
                         <div className="c-label">WhatsApp</div>
-                        <div className="c-value">+91 99999 99999</div>
+                        <div className="c-value">+91 8729016970</div>
                     </div>
                 </a>
-                <a href="https://github.com" className="contact-link" target="_blank" rel="noreferrer">
+                <a href="https://github.com/01mrabhi" className="contact-link" target="_blank" rel="noreferrer">
                     <span className="c-icon">💻</span>
                     <div>
                         <div className="c-label">GitHub</div>
-                        <div className="c-value">github.com/abhishek</div>
+                        <div className="c-value">github.com/01mrabhi</div>
                     </div>
                 </a>
             </div>
