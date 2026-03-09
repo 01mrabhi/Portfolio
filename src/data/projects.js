@@ -4,6 +4,15 @@
 export const projects = [
     {
         id: 1,
+        title: "VelconTech - Engineering Digital Excellence",
+        description: "A comprehensive digital growth agency landing page featuring premium UI/UX design, optimized performance, and SEO best practices. Built for manufacturers and B2B businesses.",
+        technologies: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+        githubUrl: "",
+        liveUrl: "https://velcontech.in",
+        image: "/projects/velcontech.png"
+    },
+    {
+        id: 2,
         title: "E-Commerce Platform",
         description: "A full-stack e-commerce solution built with the MERN stack featuring user authentication, payment gateway integration, and a responsive admin dashboard.",
         technologies: ["React", "Node.js", "Express", "MongoDB", "Redux"],
@@ -12,7 +21,7 @@ export const projects = [
         image: "https://images.unsplash.com/photo-1557821552-17105153ce9a?q=80&w=800&auto=format&fit=crop" // Temporary placeholder
     },
     {
-        id: 2,
+        id: 3,
         title: "Task Management App",
         description: "A collaborative task management tool with real-time updates, drag-and-drop kanban boards, and team workspaces.",
         technologies: ["React", "Firebase", "Tailwind CSS", "Framer Motion"],
@@ -21,7 +30,7 @@ export const projects = [
         image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=800&auto=format&fit=crop"
     },
     {
-        id: 3,
+        id: 4,
         title: "Portfolio Website v1",
         description: "My previous portfolio website showcasing my early experiments with vanilla HTML, CSS, and basic JavaScript animations.",
         technologies: ["HTML", "CSS", "JavaScript"],
