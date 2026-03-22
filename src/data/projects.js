@@ -23,11 +23,11 @@ export const projects = [
     {
         id: 3,
         title: "Rajroop Feed",
-        description: "A modern feed and content delivery application designed for optimal user engagement, featuring dynamic interactions and responsive design.",
-        technologies: ["React", "Node.js", "Tailwind CSS"],
+        description: "A responsive company website for Rajroop Feed, showcasing products and business information with a clean and professional design.",
+        technologies: ["HTML", "CSS", "JavaScript"],
         githubUrl: "",
-        liveUrl: "",
-        image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=800&auto=format&fit=crop"
+        liveUrl: "https://www.rajroopfeed.com",
+        image: "https://images.unsplash.com/photo-1594722889246-24be80603af7?q=80&w=800&auto=format&fit=crop"
     },
     {
         id: 4,

@@ -183,6 +183,11 @@
     position: relative;
     z-index: 3;
     padding: 36px 24px 20px;
+    transition: opacity 0.4s ease;
+}
+
+.phase-card:hover .phase-icon-area {
+    opacity: 0;
 }
 
 .phase-icon-ring {
@@ -209,6 +214,11 @@
     position: relative;
     z-index: 3;
     padding: 0 24px 28px;
+    transition: opacity 0.4s ease;
+}
+
+.phase-card:hover .phase-label {
+    opacity: 0;
 }
 
 .phase-chip {
@@ -248,15 +258,15 @@
     z-index: 4;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 32px;
+    justify-content: flex-start;
+    padding: 50px 32px 32px;
     opacity: 0;
     transform: translateY(10px);
     transition: opacity 0.4s ease, transform 0.4s ease;
     pointer-events: none;
     background: linear-gradient(to bottom,
-            rgba(8, 13, 26, 0.1) 0%,
-            rgba(8, 13, 26, 0.85) 100%);
+            rgba(8, 13, 26, 0.9) 0%,
+            rgba(8, 13, 26, 0.98) 100%);
 }
 
 .phase-card:hover .phase-content {
