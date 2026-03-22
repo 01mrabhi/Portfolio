@@ -41,7 +41,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     overflow: hidden;
-    min-height: 340px;
+    min-height: 400px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -311,7 +311,7 @@
     }
 
     .phase-card {
-        min-height: 260px;
+        min-height: 320px;
     }
 
     .phase-content {
