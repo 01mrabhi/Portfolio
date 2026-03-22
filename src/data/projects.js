@@ -13,12 +13,12 @@ export const projects = [
     },
     {
         id: 2,
-        title: "E-Commerce Platform",
-        description: "A full-stack e-commerce solution built with the MERN stack featuring user authentication, payment gateway integration, and a responsive admin dashboard.",
-        technologies: ["React", "Node.js", "Express", "MongoDB", "Redux"],
-        githubUrl: "https://github.com/yourusername/project1",
-        liveUrl: "https://project1.com",
-        image: "https://images.unsplash.com/photo-1557821552-17105153ce9a?q=80&w=800&auto=format&fit=crop" // Temporary placeholder
+        title: "Urban Vein",
+        description: "A premium e-commerce platform for street aesthetics and high-grade fabrics. (Currently in building phase).",
+        technologies: ["React", "Node.js", "Express", "MongoDB"],
+        githubUrl: "",
+        liveUrl: "",
+        image: "/projects/urbanvein.png"
     },
     {
         id: 3,
@@ -27,7 +27,7 @@ export const projects = [
         technologies: ["HTML", "CSS", "JavaScript"],
         githubUrl: "",
         liveUrl: "https://www.rajroopfeed.com",
-        image: "https://images.unsplash.com/photo-1594722889246-24be80603af7?q=80&w=800&auto=format&fit=crop"
+        image: "/projects/rajroop.png"
     },
     {
         id: 4,
