@@ -22,11 +22,11 @@ export const projects = [
     },
     {
         id: 3,
-        title: "Task Management App",
-        description: "A collaborative task management tool with real-time updates, drag-and-drop kanban boards, and team workspaces.",
-        technologies: ["React", "Firebase", "Tailwind CSS", "Framer Motion"],
-        githubUrl: "https://github.com/yourusername/project2",
-        liveUrl: "https://project2.com",
+        title: "Rajroop Feed",
+        description: "A modern feed and content delivery application designed for optimal user engagement, featuring dynamic interactions and responsive design.",
+        technologies: ["React", "Node.js", "Tailwind CSS"],
+        githubUrl: "",
+        liveUrl: "",
         image: "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?q=80&w=800&auto=format&fit=crop"
     },
     {

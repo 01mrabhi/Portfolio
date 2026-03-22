@@ -16,7 +16,7 @@
 
 .approach-heading {
     font-family: 'Outfit', sans-serif;
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
     font-weight: 800;
     color: #f1f5f9;
 }
@@ -186,14 +186,14 @@
 }
 
 .phase-icon-ring {
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
     border: 2px solid rgba(255, 255, 255, 0.12);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.2rem;
+    font-size: 3rem;
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(10px);
     transition: border-color 0.3s, transform 0.3s;
@@ -214,11 +214,11 @@
 .phase-chip {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     background: rgba(15, 23, 42, 0.85);
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 100px;
-    padding: 8px 22px;
+    padding: 12px 28px;
     backdrop-filter: blur(12px);
     transition: border-color 0.3s;
 }
@@ -229,7 +229,7 @@
 
 .phase-chip-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 0.95rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: #e2e8f0;
 }
@@ -266,30 +266,30 @@
 
 .phase-content-title {
     font-family: 'Outfit', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     font-weight: 800;
     color: #f1f5f9;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
 }
 
 .phase-content-desc {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     color: #94a3b8;
     line-height: 1.7;
 }
 
 .phase-steps {
-    margin-top: 16px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 12px;
 }
 
 .phase-step {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
-    font-size: 0.82rem;
+    gap: 12px;
+    font-size: 1rem;
     color: #cbd5e1;
 }
 

@@ -12,7 +12,7 @@ const SECTIONS = [
         content: 'intro',
         ctas: [
             { label: '↓ See What I Do', href: null, primary: true, scrollTo: 1 },
-            { label: 'Download CV', href: '#', primary: false },
+            { label: 'Contact Me', href: 'mailto:shekhu652@gmail.com', primary: false },
         ],
     },
     {
@@ -159,7 +159,8 @@ export default function ScrollExperience() {
         const wrapper = wrapperRef.current
         if (!wrapper) return
         const totalScroll = wrapper.offsetHeight - window.innerHeight
-        const target = (sectionIdx / 4) * totalScroll + wrapper.offsetTop
+        const targetProgress = (sectionIdx + 0.5) / 4;
+        const target = targetProgress * totalScroll + wrapper.offsetTop;
         window.scrollTo({ top: target, behavior: 'smooth' })
     }, [])
 

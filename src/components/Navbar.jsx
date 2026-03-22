@@ -13,7 +13,8 @@ function scrollToExperienceSection(sectionIdx) {
     const wrapper = document.getElementById('home')
     if (!wrapper) return
     const totalScroll = wrapper.offsetHeight - window.innerHeight
-    const target = (sectionIdx / 4) * totalScroll + wrapper.offsetTop
+    const targetProgress = (sectionIdx + 0.5) / 4;
+    const target = targetProgress * totalScroll + wrapper.offsetTop;
     window.scrollTo({ top: target, behavior: 'smooth' })
 }
 
