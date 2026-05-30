@@ -36,6 +36,6 @@ export const projects = [
         technologies: ["HTML", "CSS", "JavaScript"],
         githubUrl: "",
         liveUrl: "/portfolio-v1/index.html",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
+        image: "/projects/portfolio-v1.png"
     }
 ];
