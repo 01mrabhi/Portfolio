@@ -14,7 +14,7 @@ export const projects = [
     {
         id: 2,
         title: "Urban Vein",
-        description: "A premium e-commerce platform for street aesthetics and high-grade fabrics. (Now live!).",
+        description: "A premium e-commerce platform for street aesthetics and high-grade fabrics, featuring a sleek dark mode, seamless shopping interactions, and modern storefront styling.",
         technologies: ["React", "Node.js", "Express", "MongoDB"],
         githubUrl: "",
         liveUrl: "https://urbanvein.vercel.app/",
@@ -32,7 +32,7 @@ export const projects = [
     {
         id: 4,
         title: "Portfolio Website v1",
-        description: "My previous portfolio website showcasing my early experiments with vanilla HTML, CSS, and basic JavaScript animations.",
+        description: "My previous portfolio website showcasing my early experiments with vanilla HTML, CSS, and basic JavaScript animations. It serves as a personal time capsule of my foundational engineering skills.",
         technologies: ["HTML", "CSS", "JavaScript"],
         githubUrl: "",
         liveUrl: "/portfolio-v1/index.html",
