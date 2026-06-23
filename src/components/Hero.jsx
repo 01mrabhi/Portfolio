@@ -21,6 +21,7 @@ const Hero = () => {
                     <div className="hero-actions flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                         <a href="#projects" className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-lg font-semibold shadow-lg hover:-translate-y-1 hover:shadow-blue-500/50 transition-all text-center">View My Work</a>
                         <a href="#about" className="glass-panel text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all text-center border border-white/20">About Me</a>
+                        <a href="/Abhishek_Kumar_Resume.pdf" target="_blank" rel="noopener noreferrer" className="glass-panel text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10 transition-all text-center border border-white/20">Resume</a>
                     </div>
                 </div>
 

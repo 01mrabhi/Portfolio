@@ -5,6 +5,7 @@ const NAV_LINKS = [
     { label: 'About', href: '#about' },
     { label: 'Work', href: '#projects' },
     { label: 'Skills', href: null, sectionIdx: 1 },   // scrolls to "What I Do" in experience
+    { label: 'Resume', href: '/Abhishek_Kumar_Resume.pdf', external: true },
     { label: 'Contact', href: '#contact' },
 ]
 
@@ -63,7 +64,7 @@ const Navbar = () => {
                                 Hire Me
                             </a>
                         ) : (
-                            <a href={link.href} className="text-sm font-semibold text-slate-300 hover:text-white transition-colors relative group">
+                            <a href={link.href} target={link.external ? "_blank" : "_self"} rel={link.external ? "noopener noreferrer" : ""} className="text-sm font-semibold text-slate-300 hover:text-white transition-colors relative group">
                                 {link.label}
                                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full" />
                             </a>
@@ -109,7 +110,9 @@ const Navbar = () => {
                             ) : (
                                 <a
                                     href={link.href}
-                                    onClick={() => setMenuOpen(false)}
+                                    onClick={() => { if(!link.external) setMenuOpen(false) }}
+                                    target={link.external ? "_blank" : "_self"}
+                                    rel={link.external ? "noopener noreferrer" : ""}
                                     className="block text-sm font-semibold text-slate-300 hover:text-white transition-colors"
                                 >
                                     {link.label}
