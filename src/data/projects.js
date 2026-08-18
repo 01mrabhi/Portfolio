@@ -17,7 +17,7 @@ export const projects = [
         description: "A premium e-commerce platform for street aesthetics and high-grade fabrics, featuring a sleek dark mode, seamless shopping interactions, and modern storefront styling.",
         technologies: ["React", "Node.js", "Express", "MongoDB"],
         githubUrl: "",
-        liveUrl: "https://urbanvein.vercel.app/",
+        liveUrl: "https://urbanvein.in",
         image: "/projects/urbanvein.png"
     },
     {
